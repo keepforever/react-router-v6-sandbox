@@ -8,24 +8,27 @@ import AboutChickens from './comps/AboutChickens';
 import AboutPigs from './comps/AboutPigs';
 import Things from './comps/Things';
 import SpecificThing from './comps/SpecificThing';
+import TestThing from './comps/TestThing';
 
-function App() {
+const App = props => {
     return (
         <div style={{ padding: '40px' }}>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route path="/home" element={<Home />} />
+                    {/* <Route path="home" element={<Home />} /> */}
+                    <Route path="home" element={<Home {...props} />} />
                     <Route path="about" element={<About />}>
                         <Route path="chickens" element={<AboutChickens />} />
                         <Route path="pigs" element={<AboutPigs />} />
                     </Route>
                     <Route path="things" element={<Things />}>
+                        <Route path="" element={<TestThing {...props} />} />
                         <Route path=":id" element={<SpecificThing />} />
                     </Route>
                 </Route>
             </Routes>
         </div>
     );
-}
+};
 
 export default App;
