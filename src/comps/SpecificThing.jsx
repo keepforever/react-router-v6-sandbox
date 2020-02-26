@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SpecificThing = props => {
     let { id } = useParams();
@@ -9,6 +9,7 @@ const SpecificThing = props => {
             <p>
                 "{id}" pulled from url via <code>useParams()</code>
             </p>
+            <Link to="/home">Take Me Home</Link>
         </div>
     );
 };
