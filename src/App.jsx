@@ -12,9 +12,6 @@ import SpecificThing from './comps/SpecificThing';
 function App() {
     return (
         <div style={{ padding: '40px' }}>
-            <div style={{ display: 'block', justifyContent: 'flex-start' }}>
-                <Link to="/home">Home</Link> | <Link to="about">About</Link> | <Link to="things">Things</Link>
-            </div>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route path="/home" element={<Home />} />
