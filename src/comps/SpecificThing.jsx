@@ -5,8 +5,7 @@ const SpecificThing = props => {
     let { id } = useParams();
     return (
         <div>
-            <h1>Hello SpecificThing</h1>
-            <h2>id = {id}</h2>
+            <h1>Hello SpecificThing "{id}"</h1>
             <p>
                 "{id}" pulled from url via <code>useParams()</code>
             </p>
