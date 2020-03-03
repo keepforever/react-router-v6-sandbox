@@ -13,6 +13,7 @@ import ProtectedPageAlpha from './comps/ProtectedPageAlpha';
 
 import ProtectedRoute from './comps/ProtectedRoute';
 import NotFound from './comps/NotFound';
+import TestNavigate from './comps/TestNavigate';
 
 const App = props => {
     const [isAllowed, setIsAllowed] = React.useState(false);
@@ -49,6 +50,7 @@ const App = props => {
                         <Route path="" element={<TestThing {...props} />} />
                         <Route path=":id" element={<SpecificThing />} />
                     </Route>
+                    <Route path="test-navigate" element={<TestNavigate {...props} />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
